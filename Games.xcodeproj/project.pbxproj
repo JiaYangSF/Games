@@ -13,6 +13,8 @@
 		9F87A7C61E2C922A00A41FCA /* Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A7C41E2C922A00A41FCA /* Games.xcdatamodeld */; };
 		9F87A7C81E2C922A00A41FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A7C71E2C922A00A41FCA /* Assets.xcassets */; };
 		9F87A7CB1E2C922A00A41FCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A7C91E2C922A00A41FCA /* LaunchScreen.storyboard */; };
+		9F87A7D31E2D3B7E00A41FCA /* Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A7D21E2D3B7E00A41FCA /* Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg */; };
+		9F87A7D71E2D3DBB00A41FCA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A7D61E2D3DBB00A41FCA /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9F87A7C71E2C922A00A41FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F87A7CA1E2C922A00A41FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F87A7CC1E2C922A00A41FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F87A7D21E2D3B7E00A41FCA /* Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg; sourceTree = "<group>"; };
+		9F87A7D61E2D3DBB00A41FCA /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		9F87A7BC1E2C922A00A41FCA /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				9F87A7D21E2D3B7E00A41FCA /* Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg */,
 				9F87A7BD1E2C922A00A41FCA /* AppDelegate.swift */,
 				9F87A7BF1E2C922A00A41FCA /* ViewController.swift */,
+				9F87A7D61E2D3DBB00A41FCA /* GameViewController.swift */,
 				9F87A7C11E2C922A00A41FCA /* Main.storyboard */,
 				9F87A7C71E2C922A00A41FCA /* Assets.xcassets */,
 				9F87A7C91E2C922A00A41FCA /* LaunchScreen.storyboard */,
@@ -128,6 +134,7 @@
 			files = (
 				9F87A7CB1E2C922A00A41FCA /* LaunchScreen.storyboard in Resources */,
 				9F87A7C81E2C922A00A41FCA /* Assets.xcassets in Resources */,
+				9F87A7D31E2D3B7E00A41FCA /* Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg in Resources */,
 				9F87A7C31E2C922A00A41FCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F87A7D71E2D3DBB00A41FCA /* GameViewController.swift in Sources */,
 				9F87A7C01E2C922A00A41FCA /* ViewController.swift in Sources */,
 				9F87A7C61E2C922A00A41FCA /* Games.xcdatamodeld in Sources */,
 				9F87A7BE1E2C922A00A41FCA /* AppDelegate.swift in Sources */,
