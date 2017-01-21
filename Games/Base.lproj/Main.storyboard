@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gmZ-fc-0LD">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W1O-Jr-ydn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -38,7 +39,7 @@
                     <navigationItem key="navigationItem" id="vcR-lC-KGn">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p9Y-aI-N5c">
                             <connections>
-                                <segue destination="JMa-PK-H52" kind="show" id="8EA-Sh-aFh"/>
+                                <segue destination="JMa-PK-H52" kind="show" identifier="gameSegue" id="8EA-Sh-aFh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,27 +60,34 @@
                         <viewControllerLayoutGuide type="bottom" id="5GF-f9-uen"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WF1-DA-KWp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_Mario.aead314d435d8e52d9a4e92a6f799c4eee08081e.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zxM-Xm-D1k">
-                                <rect key="frame" x="48" y="84" width="280" height="150"/>
+                                <rect key="frame" x="20" y="84" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="ns5-U8-8uR"/>
                                     <constraint firstAttribute="height" constant="150" id="odQ-0q-uvZ"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the game" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-bU-ZRc">
-                                <rect key="frame" x="47.5" y="318" width="280" height="30"/>
+                                <rect key="frame" x="20" y="318" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-OC-tX3">
-                                <rect key="frame" x="172" y="419" width="30" height="30"/>
+                                <rect key="frame" x="145" y="419" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="JMa-PK-H52" eventType="touchUpInside" id="OUW-2z-bjV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-Sk-4IY">
+                                <rect key="frame" x="173" y="489" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="JMa-PK-H52" eventType="touchUpInside" id="oyn-4P-SxQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +96,10 @@
                             <constraint firstItem="zxM-Xm-D1k" firstAttribute="top" secondItem="jDQ-uV-2z0" secondAttribute="bottom" constant="20" id="1ei-eR-eHi"/>
                             <constraint firstItem="zxM-Xm-D1k" firstAttribute="centerX" secondItem="WF1-DA-KWp" secondAttribute="centerX" id="F7J-17-quw"/>
                             <constraint firstItem="e1h-OC-tX3" firstAttribute="top" secondItem="dyM-bU-ZRc" secondAttribute="bottom" constant="71" id="G6F-5Q-ezr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OfV-Sk-4IY" secondAttribute="trailing" constant="141" id="Gee-5U-L27"/>
                             <constraint firstItem="e1h-OC-tX3" firstAttribute="centerX" secondItem="WF1-DA-KWp" secondAttribute="centerX" id="GuC-64-bVn"/>
+                            <constraint firstItem="OfV-Sk-4IY" firstAttribute="top" secondItem="e1h-OC-tX3" secondAttribute="bottom" constant="40" id="ITa-Fm-xn4"/>
+                            <constraint firstItem="OfV-Sk-4IY" firstAttribute="leading" secondItem="WF1-DA-KWp" secondAttribute="leadingMargin" constant="157" id="UzY-Zv-nJC"/>
                             <constraint firstItem="zxM-Xm-D1k" firstAttribute="centerX" secondItem="WF1-DA-KWp" secondAttribute="centerX" id="YKy-u7-iJ1"/>
                             <constraint firstItem="dyM-bU-ZRc" firstAttribute="width" secondItem="zxM-Xm-D1k" secondAttribute="width" id="ePl-4N-ZLh"/>
                             <constraint firstItem="dyM-bU-ZRc" firstAttribute="centerX" secondItem="WF1-DA-KWp" secondAttribute="centerX" id="eW1-fi-MJW"/>
@@ -110,6 +121,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdate" destination="e1h-OC-tX3" id="WMu-RK-GqA"/>
+                        <outlet property="deleteButton" destination="OfV-Sk-4IY" id="SKK-Mf-3ks"/>
                         <outlet property="gameImageView" destination="zxM-Xm-D1k" id="MbS-ns-DMd"/>
                         <outlet property="titleTextField" destination="dyM-bU-ZRc" id="uEE-VH-u6l"/>
                     </connections>

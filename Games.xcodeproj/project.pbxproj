@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F6414A51E32770B003F701C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A7BF1E2C922A00A41FCA /* ViewController.swift */; };
 		9F87A7BE1E2C922A00A41FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A7BD1E2C922A00A41FCA /* AppDelegate.swift */; };
-		9F87A7C01E2C922A00A41FCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A7BF1E2C922A00A41FCA /* ViewController.swift */; };
 		9F87A7C31E2C922A00A41FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A7C11E2C922A00A41FCA /* Main.storyboard */; };
 		9F87A7C61E2C922A00A41FCA /* Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A7C41E2C922A00A41FCA /* Games.xcdatamodeld */; };
 		9F87A7C81E2C922A00A41FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A7C71E2C922A00A41FCA /* Assets.xcassets */; };
@@ -105,6 +105,7 @@
 				TargetAttributes = {
 					9F87A7B91E2C922A00A41FCA = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = GMY8R23HZW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -147,8 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F87A7D71E2D3DBB00A41FCA /* GameViewController.swift in Sources */,
-				9F87A7C01E2C922A00A41FCA /* ViewController.swift in Sources */,
 				9F87A7C61E2C922A00A41FCA /* Games.xcdatamodeld in Sources */,
+				9F6414A51E32770B003F701C /* ViewController.swift in Sources */,
 				9F87A7BE1E2C922A00A41FCA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +273,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GMY8R23HZW;
 				INFOPLIST_FILE = Games/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = smilewayx.Games;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,7 +287,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GMY8R23HZW;
 				INFOPLIST_FILE = Games/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = smilewayx.Games;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +316,7 @@
 				9F87A7D11E2C922A00A41FCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
